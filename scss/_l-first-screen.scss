@@ -13,7 +13,7 @@
     display: flex;
     align-items: center;
     min-height: 800px;
-    padding: 40px 153px;
+    padding: 40px 8.5%;
     box-sizing: border-box;
     background: radial-gradient(
       254% 64% at 192% 76%,
@@ -95,11 +95,26 @@
           color: #fff;
           border: 1px solid #fff;
           border-radius: 5px;
+          background-color: rgba($color: $white, $alpha: 0);
+          transition-property: color, background-color, border-color;
+          transition-timing-function: ease-in-out;
+          transition-duration: 0.2s;
           cursor: pointer;
 
           @include mobile {
             padding: 16px 40px;
             font-size: 16px;
+          }
+
+          &:hover {
+            color: $purple100;
+            background-color: rgba($color: $white, $alpha: 1);
+          }
+
+          &:active {
+            color: $white;
+            border-color: $purple900;
+            background-color: rgba($color: $purple900, $alpha: 1);
           }
         }
       }
@@ -120,7 +135,6 @@
         bottom: auto;
         width: 100%;
         aspect-ratio: 100 / 100;
-        background-color: rgba($color: #000000, $alpha: 0.5);
       }
 
       &-image {
