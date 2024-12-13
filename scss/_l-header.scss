@@ -1,0 +1,150 @@
+.header {
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 17px 0;
+
+    @include mobile {
+      padding: 20px 0;
+    }
+  }
+
+  &__social {
+    flex: 0 0 180px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    @include mobile {
+      flex: 0 0 100px;
+      gap: 5px;
+    }
+
+    &-link {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      aspect-ratio: 1 / 1;
+      border-radius: 10px;
+      background-color: #f8f0ff;
+      transition: background-color ease-in-out 0.2s;
+
+      &:hover {
+        background-color: $purple900;
+      }
+
+      &:active {
+        background-color: $purple100;
+      }
+
+      &::before {
+        content: '';
+        display: block;
+        width: 24px;
+        aspect-ratio: 1 / 1;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: auto;
+        transition: filter ease-in-out 0.2s;
+      }
+
+      &:hover::before {
+        filter: brightness(500%);
+      }
+
+      &_vk {
+        &::before {
+          background-image: url(../assets/vk.svg);
+        }
+      }
+
+      &_tg {
+        &::before {
+          background-image: url(../assets/tg.svg);
+        }
+      }
+
+      &_ok {
+        &::before {
+          background-image: url(../assets/ok.svg);
+        }
+      }
+    }
+  }
+
+  &__logo {
+    flex: 0 0 auto;
+
+    &-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &-image {
+        display: block;
+        max-width: 100%;
+        height: auto;
+
+        @include mobile {
+          width: 90px;
+        }
+      }
+    }
+  }
+
+  &__phone {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex: 0 0 180px;
+    gap: 2px;
+
+    @include mobile {
+      flex: 0 0 100px;
+    }
+
+    &-link {
+      font-weight: 600;
+      font-size: 20px;
+      text-align: right;
+      color: #000;
+      transition: color ease-in-out 0.2s;
+
+      &:hover {
+        color: $purple900;
+      }
+
+      &:active {
+        color: $purple100;
+      }
+
+      @include mobile {
+        display: block;
+        width: 30px;
+        aspect-ratio: 1 / 1;
+        background: url(../assets/phone.svg) center / 24px no-repeat;
+      }
+
+      &-text {
+        @include mobile {
+          display: none;
+        }
+      }
+    }
+
+    &-text {
+      font-weight: 400;
+      font-size: 14px;
+      text-align: right;
+      color: #5a5a5a;
+
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+}
