@@ -1,0 +1,167 @@
+.key-product {
+  padding: 120px 0 0 ;
+
+  @include tablet {
+    padding: 60px 0 0;
+  }
+
+  &__content {
+    display: flex;
+    background: radial-gradient(247.54% 77.58% at 68.93% 75.38%, #735c9f 36.26%, #391b57 78.79%);
+
+    @include tablet {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1 1 920px;
+    padding: 40px 6.5%;
+    box-sizing: border-box;
+
+    @include desktop {
+      padding: 30px;
+    }
+
+    &-title {
+      margin: 0 0 10px;
+      font-weight: 600;
+      font-size: 40px;
+      color: #fff;
+
+      @include laptop {
+        font-size: 32px;
+      }
+
+      @include mobile {
+        margin-bottom: 5px;
+        font-size: 25px;
+      }
+    }
+
+    &-description {
+      margin: 0 0 40px;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 160%;
+      color: #fff;
+
+      @include laptop {
+        font-size: 16px;
+      }
+
+      @include mobile {
+        margin-bottom: 20px;
+        font-size: 16px;
+      }
+    }
+
+    &-text {
+      margin: 0 0 64px;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 160%;
+      color: #fff;
+
+      @include laptop {
+        margin-bottom: 40px;
+        font-size: 18px;
+      }
+
+      @include mobile {
+        margin-bottom: 20px;
+        font-size: 16px;
+      }
+    }
+
+    &-advantages {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+
+      &-card {
+        flex: 0 1 174px;
+        padding: 20px;
+        box-sizing: border-box;
+        border: 1px solid #8567a2;
+        border-radius: 20px;
+
+        @include tablet {
+          flex: 0 0 calc(50% - 5px);
+          padding: 20px 12px;
+        }
+
+        &-value {
+          position: relative;
+          padding-top: 72px;
+          margin: 0 0 10px;
+          font-weight: 600;
+          font-size: 30px;
+          letter-spacing: -0.03em;
+          color: #fff;
+
+          @include tablet {
+            display: flex;
+            align-items: center;
+            padding: 0;
+            font-size: 20px;
+          }
+
+          & > span {
+            font-size: 50px;
+
+            @include tablet {
+              font-size: 30px;
+            }
+          }
+
+          &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 62px;
+            aspect-ratio: 1 / 1;
+            background: url(../assets/color-dropper.svg) center / cover no-repeat;
+
+            @include tablet {
+              position: static;
+              width: 32px;
+              margin-right: 8px;
+            }
+          }
+        }
+
+        &-text {
+          font-style: italic;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 130%;
+          color: #fff;
+
+          @include tablet {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  &__figure {
+    flex: 1 1 900px;
+
+    &-image {
+      display: block;
+      max-width: 100%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
