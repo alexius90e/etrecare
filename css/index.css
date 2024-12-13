@@ -11,7 +11,7 @@ body {
   position: relative;
   margin: 0;
   overflow-y: scroll;
-  color: #181d42;
+  color: #1e1e1e;
   background-color: #ffffff;
 }
 
@@ -33,11 +33,16 @@ img {
 }
 
 .container {
-  max-width: 1440px;
+  max-width: 1900px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 40px;
   box-sizing: border-box;
+}
+@media (max-width: 992px) {
+  .container {
+    padding: 0 20px;
+  }
 }
 
 .header__content {
@@ -169,4 +174,105 @@ img {
   .header__phone-text {
     display: none;
   }
+}
+
+.main-nav .container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 992px) {
+  .main-nav .container {
+    padding: 0;
+  }
+}
+.main-nav__menu {
+  display: flex;
+  align-items: center;
+  flex: 1 0 auto;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+@media (max-width: 768px) {
+  .main-nav__menu {
+    flex: 0 0 calc(100% - 132px);
+    max-width: calc(100% - 132px);
+    overflow: auto;
+  }
+}
+.main-nav__menu-item {
+  flex: 1 0 auto;
+  border: 1px solid #c9c9c9;
+  border-right: none;
+}
+.main-nav__menu-item-link {
+  display: block;
+  padding: 17px;
+  box-sizing: border-box;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #1e1e1e;
+  text-align: center;
+  transition-property: color, background-color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+}
+@media (max-width: 992px) {
+  .main-nav__menu-item-link {
+    padding: 11px 15px;
+    font-size: 14px;
+  }
+}
+.main-nav__menu-item-link:hover {
+  color: #ffffff;
+  background-color: #8754E9;
+}
+.main-nav__menu-item-link:active {
+  background-color: #735C9F;
+}
+.main-nav__bestseller {
+  flex: 0 1 734px;
+}
+@media (max-width: 1400px) {
+  .main-nav__bestseller {
+    flex: 0 1 480px;
+  }
+}
+@media (max-width: 992px) {
+  .main-nav__bestseller {
+    flex: 0 1 260px;
+  }
+}
+@media (max-width: 768px) {
+  .main-nav__bestseller {
+    flex: 0 1 132px;
+  }
+}
+.main-nav__bestseller-link {
+  display: block;
+  padding: 17px;
+  box-sizing: border-box;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: #ffffff;
+  background-color: #1e1e1e;
+  transition-property: color, background-color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+}
+@media (max-width: 992px) {
+  .main-nav__bestseller-link {
+    padding: 11px 15px;
+    font-size: 14px;
+  }
+}
+.main-nav__bestseller-link:hover {
+  background-color: #735C9F;
+}
+.main-nav__bestseller-link:active {
+  background-color: #8754E9;
 }
