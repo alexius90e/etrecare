@@ -1,0 +1,134 @@
+.care-program {
+  padding: 120px 0 0;
+  overflow: hidden;
+
+  @include tablet {
+    padding: 60px 0 0;
+  }
+
+  &__title {
+    margin: 0 0 60px;
+    font-weight: 600;
+    font-size: 40px;
+    color: #000;
+
+    @include tablet {
+      margin-bottom: 30px;
+      font-size: 25px;
+    }
+  }
+
+  &__slider {
+    position: relative;
+
+    & .swiper {
+      overflow: visible;
+    }
+
+    &-controls {
+      &-prev,
+      &-next {
+        position: absolute;
+        top: 50%;
+        z-index: 10;
+        display: block;
+        width: 40px;
+        aspect-ratio: 1 / 1;
+        background: url(../assets/next.svg) center / cover no-repeat;
+        transform: translateY(-50%);
+
+        @include laptop {
+          width: 30px;
+        }
+
+        &.swiper-button-disabled {
+          opacity: 0.3;
+        }
+      }
+
+      &-prev {
+        left: 40px;
+        transform: translateY(-50%) rotate(180deg);
+
+        @include laptop {
+          left: 20px;
+        }
+      }
+
+      &-next {
+        right: 40px;
+
+        @include laptop {
+          right: 50px;
+        }
+      }
+    }
+  }
+
+  &__card {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    min-height: 510px;
+    padding: 40px;
+    box-sizing: border-box;
+    border-radius: 50px;
+    background-color: rgba($color: #000000, $alpha: 0.2);
+    overflow: hidden;
+
+    @include laptop {
+      min-height: 420px;
+      padding: 20px;
+      border-radius: 30px;
+    }
+
+    @include mobile {
+      min-height: 300px;
+    }
+
+    &-figure {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+
+      &-image {
+        display: block;
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &-info {
+      position: relative;
+      z-index: 2;
+
+      &-title {
+        margin: 0 0 20px;
+        font-weight: 600;
+        font-size: 30px;
+        color: #fff;
+
+        @include mobile {
+          margin-bottom: 10px;
+          font-size: 20px;
+        }
+      }
+
+      &-text {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 160%;
+        color: #fff;
+
+        @include mobile {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
