@@ -73,7 +73,7 @@ const whereBuySwiper = new Swiper('.where-buy .swiper', {
       slidesPerView: 1.75,
     },
     425: {
-      slidesPerView: 2.5,
+      slidesPerView: 2.1,
     },
     768: {
       slidesPerView: 3,
@@ -96,3 +96,55 @@ const whereBuySwiper = new Swiper('.where-buy .swiper', {
     prevEl: '.where-buy__slider-controls-prev',
   },
 });
+
+const modalBuySwiper = new Swiper('.modal-buy .swiper', {
+  slidesPerView: 1,
+  spaceBetween: 0,
+  breakpoints: {
+    320: {
+      slidesPerView: 1.5,
+    },
+    360: {
+      slidesPerView: 1.75,
+    },
+    425: {
+      slidesPerView: 2.5,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+    1280: {
+      slidesPerView: 4,
+    },
+  },
+  navigation: {
+    nextEl: '.modal-buy__slider-controls-next',
+    prevEl: '.modal-buy__slider-controls-prev',
+  },
+});
+
+const selectProductBuyButtons = document.querySelectorAll(
+  '.select-product__info-card-details-buy-button'
+);
+
+const modalBuy = document.querySelector('.modal-buy');
+
+selectProductBuyButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    if (modalBuy) {
+      modalBuy.classList.add('active');
+    }
+  });
+});
+
+
+if (modalBuy) {
+  modalBuy.addEventListener('click', (event) => {
+    if (event.target === event.currentTarget) {
+      event.currentTarget.classList.remove('active')
+    }
+  })
+}
