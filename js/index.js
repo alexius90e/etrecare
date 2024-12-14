@@ -30,7 +30,6 @@ const careProgramSwiper = new Swiper('.care-program .swiper', {
   },
 });
 
-
 const selectProductSwiper = new Swiper('.select-product__info-products .swiper', {
   slidesPerView: 1,
   spaceBetween: 20,
@@ -60,5 +59,40 @@ const selectProductSwiper = new Swiper('.select-product__info-products .swiper',
   navigation: {
     nextEl: '.select-product__info-products-controls-next',
     prevEl: '.select-product__info-products-controls-prev',
+  },
+});
+
+const whereBuySwiper = new Swiper('.where-buy .swiper', {
+  slidesPerView: 1,
+  spaceBetween: 0,
+  breakpoints: {
+    320: {
+      slidesPerView: 1.5,
+    },
+    360: {
+      slidesPerView: 1.75,
+    },
+    425: {
+      slidesPerView: 2.5,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    1024: {
+      slidesPerView: 2,
+    },
+    1280: {
+      slidesPerView: 2,
+    },
+    1440: {
+      slidesPerView: 3,
+    },
+    1680: {
+      slidesPerView: 4,
+    },
+  },
+  navigation: {
+    nextEl: '.where-buy__slider-controls-next',
+    prevEl: '.where-buy__slider-controls-prev',
   },
 });

@@ -1,0 +1,186 @@
+.where-buy {
+  padding: 120px 0 0;
+  overflow: hidden;
+
+  @include tablet {
+    padding: 60px 0 0;
+  }
+
+  & .container {
+    @include laptop {
+      padding: 0;
+    }
+  }
+
+  &__content {
+    position: relative;
+  }
+
+  &__title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 480px;
+    width: 100%;
+    margin: 0;
+    padding: 48px;
+    padding-left: 0;
+    box-sizing: border-box;
+    font-weight: 600;
+    font-size: 40px;
+    color: #000;
+    border: 1px solid #c9c9c9;
+    border-left: none;
+
+    @include laptop {
+      position: relative;
+      top: auto;
+      left: auto;
+      bottom: auto;
+      max-width: none;
+      padding: 30px 20px;
+      border: none;
+      border-top: 1px solid #c9c9c9;
+    }
+
+    @include tablet {
+      font-size: 25px;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      height: 42px;
+      aspect-ratio: 526 / 58;
+      background: url(../assets/arrow.svg) top right / cover no-repeat;
+      transform: scale(1, -1);
+
+      @include laptop {
+        position: absolute;
+        top: 29px;
+        left: 406px;
+        transform: scale(-1, 1) rotate(8deg);
+      }
+
+      @include tablet {
+        top: 29px;
+        left: 254px;
+      }
+    }
+  }
+
+  &__slider {
+    position: relative;
+    margin-left: 480px;
+    padding: 80px;
+    border: 1px solid #c9c9c9;
+    border-left: none;
+    border-right: none;
+
+    @include laptop {
+      margin: 0;
+      padding: 0;
+      border: none;
+    }
+
+    &-controls {
+      @include laptop {
+        display: none;
+      }
+
+      &-prev,
+      &-next {
+        position: absolute;
+        top: 50%;
+        z-index: 10;
+        display: block;
+        width: 40px;
+        aspect-ratio: 1 / 1;
+        border-radius: 26%;
+        background: url(../assets/next.svg) center / cover no-repeat;
+        filter: invert(100%);
+        transform: translateY(-50%);
+        transition: opacity ease-in-out 0.2s;
+        cursor: pointer;
+
+        @include laptop {
+          width: 30px;
+        }
+
+        &:hover {
+          opacity: 0.6;
+        }
+
+        &.swiper-button-disabled {
+          opacity: 0.3;
+        }
+      }
+
+      &-prev {
+        left: 40px;
+        transform: translateY(-50%) rotate(180deg);
+
+        @include laptop {
+          left: 0;
+        }
+      }
+
+      &-next {
+        right: 40px;
+
+        @include laptop {
+          right: 0;
+        }
+      }
+    }
+
+    & .swiper {
+      &-slide {
+        border-right: 1px solid #c9c9c9;
+
+        @include laptop {
+          border: 1px solid #c9c9c9;
+          border-right: none;
+        }
+
+        &:last-child {
+          border-right: none;
+
+          @include laptop {
+            border: 1px solid #c9c9c9;
+            border-right: 1px solid #c9c9c9;
+          }
+        }
+      }
+    }
+  }
+
+  &__card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 62px;
+
+    @include laptop {
+      height: 90px;
+    }
+
+    &-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+
+      &-image {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
