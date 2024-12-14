@@ -1816,6 +1816,7 @@ img {
   }
 }
 .skin-needs__content-scin .skin-needs__content-figure {
+  position: relative;
   height: 100%;
 }
 .skin-needs__content-scin .skin-needs__content-figure-image {
@@ -1878,6 +1879,37 @@ img {
 @media (max-width: 768px) {
   .skin-needs__content-plant-right {
     flex: 1 1 100%;
+  }
+}
+.skin-needs__content-plant .skin-needs__content-figure {
+  position: relative;
+}
+.skin-needs__content-plant .skin-needs__content-figure::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -222px;
+  z-index: -1;
+  display: block;
+  width: 307px;
+  aspect-ratio: 1/1;
+  background: url(../assets/stamp.webp) center/cover no-repeat;
+}
+@media (max-width: 1440px) {
+  .skin-needs__content-plant .skin-needs__content-figure::before {
+    left: auto;
+    right: -220px;
+  }
+}
+@media (max-width: 1024px) {
+  .skin-needs__content-plant .skin-needs__content-figure::before {
+    width: 200px;
+    right: -120px;
+  }
+}
+@media (max-width: 768px) {
+  .skin-needs__content-plant .skin-needs__content-figure::before {
+    display: none;
   }
 }
 @media (max-width: 768px) {
@@ -2100,6 +2132,7 @@ img {
   }
 }
 .skin-needs__content-scin .skin-needs__content-figure {
+  position: relative;
   height: 100%;
 }
 .skin-needs__content-scin .skin-needs__content-figure-image {
@@ -2162,6 +2195,37 @@ img {
 @media (max-width: 768px) {
   .skin-needs__content-plant-right {
     flex: 1 1 100%;
+  }
+}
+.skin-needs__content-plant .skin-needs__content-figure {
+  position: relative;
+}
+.skin-needs__content-plant .skin-needs__content-figure::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -222px;
+  z-index: -1;
+  display: block;
+  width: 307px;
+  aspect-ratio: 1/1;
+  background: url(../assets/stamp.webp) center/cover no-repeat;
+}
+@media (max-width: 1440px) {
+  .skin-needs__content-plant .skin-needs__content-figure::before {
+    left: auto;
+    right: -220px;
+  }
+}
+@media (max-width: 1024px) {
+  .skin-needs__content-plant .skin-needs__content-figure::before {
+    width: 200px;
+    right: -120px;
+  }
+}
+@media (max-width: 768px) {
+  .skin-needs__content-plant .skin-needs__content-figure::before {
+    display: none;
   }
 }
 @media (max-width: 768px) {

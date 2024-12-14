@@ -156,7 +156,10 @@
     }
 
     &-scin &-figure {
+      position: relative;
       height: 100%;
+
+
 
       &-image {
         width: 100%;
@@ -218,6 +221,34 @@
     }
 
     &-plant &-figure {
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: -222px;
+        z-index: -1;
+        display: block;
+        width: 307px;
+        aspect-ratio:  1 / 1;
+        background: url(../assets/stamp.webp) center / cover no-repeat;
+
+        @include desktop {
+          left: auto;
+          right: -220px;
+        }
+
+        @include laptop {
+          width: 200px;
+          right: -120px;
+        }
+
+        @include tablet {
+          display: none;
+        }
+      }
+
       @include tablet {
         display: flex;
         align-items: center;
