@@ -34,11 +34,18 @@
         display: block;
         width: 40px;
         aspect-ratio: 1 / 1;
+        border-radius: 26%;
         background: url(../assets/next.svg) center / cover no-repeat;
         transform: translateY(-50%);
+        transition: background-color ease-in-out 0.2s;
+        cursor: pointer;
 
         @include laptop {
           width: 30px;
+        }
+
+        &:hover {
+          background-color: rgba($color: $purple100, $alpha: 0.5);
         }
 
         &.swiper-button-disabled {

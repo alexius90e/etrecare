@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
 
-    @include laptop {
+    @include desktop {
       padding: 0;
     }
   }

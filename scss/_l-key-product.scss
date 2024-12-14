@@ -91,7 +91,7 @@
         border: 1px solid #8567a2;
         border-radius: 20px;
 
-        @include tablet {
+        @include laptop {
           flex: 0 0 calc(50% - 5px);
           padding: 20px 12px;
         }
@@ -105,7 +105,7 @@
           letter-spacing: -0.03em;
           color: #fff;
 
-          @include tablet {
+          @include laptop {
             display: flex;
             align-items: center;
             padding: 0;
@@ -115,7 +115,7 @@
           & > span {
             font-size: 50px;
 
-            @include tablet {
+            @include laptop {
               font-size: 30px;
             }
           }
@@ -130,7 +130,7 @@
             aspect-ratio: 1 / 1;
             background: url(../assets/color-dropper.svg) center / cover no-repeat;
 
-            @include tablet {
+            @include laptop {
               position: static;
               width: 32px;
               margin-right: 8px;
@@ -145,7 +145,7 @@
           line-height: 130%;
           color: #fff;
 
-          @include tablet {
+          @include laptop {
             font-size: 14px;
           }
         }
