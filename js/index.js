@@ -1,4 +1,4 @@
-const swiper = new Swiper('.care-program .swiper', {
+const careProgramSwiper = new Swiper('.care-program .swiper', {
   slidesPerView: 1,
   spaceBetween: 20,
   breakpoints: {
@@ -14,10 +14,10 @@ const swiper = new Swiper('.care-program .swiper', {
     768: {
       slidesPerView: 1.5,
     },
-    992: {
+    1024: {
       slidesPerView: 2,
     },
-    1400: {
+    1440: {
       slidesPerView: 2.5,
     },
     1600: {
@@ -27,5 +27,38 @@ const swiper = new Swiper('.care-program .swiper', {
   navigation: {
     nextEl: '.care-program__slider-controls-next',
     prevEl: '.care-program__slider-controls-prev',
+  },
+});
+
+
+const selectProductSwiper = new Swiper('.select-product__info-products .swiper', {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    420: {
+      slidesPerView: 1.1,
+    },
+    576: {
+      slidesPerView: 1.75,
+    },
+    768: {
+      slidesPerView: 2.5,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+    1280: {
+      slidesPerView: 3.5,
+    },
+    1440: {
+      slidesPerView: 4,
+    },
+  },
+  navigation: {
+    nextEl: '.select-product__info-products-controls-next',
+    prevEl: '.select-product__info-products-controls-prev',
   },
 });

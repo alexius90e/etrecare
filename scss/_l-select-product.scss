@@ -133,4 +133,253 @@
       }
     }
   }
+
+  &__info {
+    padding: 40px;
+    border-radius: 20px;
+    background-color: #ebe4f1;
+
+    @include desktop {
+      margin: 0 -40px;
+    }
+
+    @include laptop {
+      margin: 0 -20px;
+      padding: 20px;
+    }
+
+    &-text {
+      margin: 0 0 40px;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 160%;
+      color: #000;
+
+      @include laptop {
+        font-size: 18px;
+      }
+
+      @include tablet {
+        margin: 0 0 20px;
+        font-size: 16px;
+      }
+    }
+
+    &-menu {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 0 0 40px;
+
+      @include tablet {
+        flex-wrap: nowrap;
+        overflow: auto;
+        margin: 0 0 20px;
+      }
+
+      &-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 288px;
+        width: fit-content;
+        min-height: 58px;
+        box-sizing: border-box;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: -0.03em;
+        color: #1e1e1e;
+        border: 1px solid #000;
+        border-radius: 20px;
+        background-color: rgba($color: $purple900, $alpha: 0);
+        transition-property: color, border;
+        transition-timing-function: ease-in-out;
+        transition-duration: 0.2s;
+        cursor: pointer;
+
+        @include laptop {
+          flex: 0 0 auto;
+          padding: 10px 20px;
+        }
+
+        &:hover {
+          color: $purple900;
+          border-color: $purple900;
+        }
+
+        &:active {
+          color: $purple100;
+          border-color: $purple100;
+        }
+
+        &.active {
+          border-width: 2px;
+          font-weight: 700;
+        }
+      }
+    }
+
+    &-products {
+      position: relative;
+
+      &-controls {
+        &-prev,
+        &-next {
+          position: absolute;
+          top: 135px;
+          z-index: 10;
+          display: block;
+          width: 40px;
+          aspect-ratio: 1 / 1;
+          border-radius: 26%;
+          background: url(../assets/next.svg) center / cover no-repeat;
+          filter: invert(100%);
+          transition: background-color ease-in-out 0.2s;
+          cursor: pointer;
+  
+          @include laptop {
+            width: 30px;
+          }
+  
+          &:hover {
+            background-color: rgba($color: $purple100, $alpha: 0.5);
+          }
+  
+          &.swiper-button-disabled {
+            opacity: 0.3;
+          }
+        }
+  
+        &-prev {
+          left: 0;
+          transform: rotate(180deg);
+  
+          @include tablet {
+            left: 20px;
+          }
+        }
+  
+        &-next {
+          right: 0;
+  
+          @include tablet {
+            right: 20px;
+          }
+        }
+      }
+    }
+
+    &-card {
+      cursor: pointer;
+
+      &-figure {
+        position: relative;
+        margin: 0 0 18px;
+        width: 100%;
+        aspect-ratio: 405/ 310;
+        border-radius: 30px;
+        overflow: hidden;
+
+        &-image {
+          position: relative;
+          z-index: 1;
+          display: block;
+          max-width: 100%;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+
+          &_hidden {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 2;
+            transition: opacity ease-in-out 0.4s;
+            opacity: 0;
+          }
+        }
+      }
+
+      &:hover &-figure {
+        &-image {
+          &_hidden {
+            opacity: 1;
+          }
+        }
+      }
+
+      &-details {
+        &-title {
+          margin: 0 0 10px;
+          font-weight: 600;
+          font-size: 20px;
+          color: #000;
+
+          @include laptop {
+            font-size: 18px;
+          }
+
+          @include tablet {
+            font-size: 16px;
+          }
+        }
+
+        &-text {
+          margin: 0 0 18px;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 160%;
+          color: #000;
+
+          @include laptop {
+            font-size: 14px;
+          }
+        }
+
+        &-buy {
+          &-button {
+            display: inline-block;
+            padding: 15px 60px;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 150%;
+            letter-spacing: -0.03em;
+            color: #000;
+            border: 1px solid #000;
+            border-radius: 5px;
+            background-color: rgba($color: $white, $alpha: 0);
+            transition-property: color, background-color, border;
+            transition-timing-function: ease-in-out;
+            transition-duration: 0.2s;
+            user-select: none;
+            cursor: pointer;
+
+            @include laptop {
+              padding: 12px 40px;
+              font-size: 18px;
+            }
+
+            @include tablet {
+              padding: 10px 30px;
+              font-size: 16px;
+            }
+
+            &:hover {
+              color: $white;
+              background-color: rgba($color: $black, $alpha: 1);
+            }
+
+            &:active {
+              color: $white;
+              border-color: $purple900;
+              background-color: rgba($color: $purple900, $alpha: 1);
+            }
+          }
+        }
+      }
+    }
+  }
 }
