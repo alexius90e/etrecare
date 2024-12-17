@@ -555,6 +555,13 @@ img {
     padding: 0;
   }
 }
+.first-screen .container .swiper-scrollbar {
+  height: 6px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.first-screen .container .swiper-scrollbar-drag {
+  background-color: rgba(255, 255, 255, 0.7);
+}
 .first-screen__banner {
   position: relative;
   display: flex;

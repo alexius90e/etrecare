@@ -6,6 +6,18 @@
     @include desktop {
       padding: 0;
     }
+
+    & .swiper {
+      &-scrollbar {
+        height: 6px;
+        background-color: rgba($color: #ffffff, $alpha: 0.1);
+
+        &-drag {
+          background-color: rgba($color: #ffffff, $alpha: 0.7);
+
+        }
+      }
+    }
   }
 
   &__banner {

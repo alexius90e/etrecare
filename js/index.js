@@ -1,3 +1,11 @@
+const firstScreenSwiper = new Swiper('.first-screen .swiper', {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+
 const careProgramSwiper = new Swiper('.care-program .swiper', {
   slidesPerView: 1,
   spaceBetween: 20,
@@ -140,11 +148,10 @@ selectProductBuyButtons.forEach((button) => {
   });
 });
 
-
 if (modalBuy) {
   modalBuy.addEventListener('click', (event) => {
     if (event.target === event.currentTarget) {
-      event.currentTarget.classList.remove('active')
+      event.currentTarget.classList.remove('active');
     }
-  })
+  });
 }
