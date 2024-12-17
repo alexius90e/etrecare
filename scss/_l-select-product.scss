@@ -80,6 +80,7 @@
 
     &-card {
       flex: 0 0 174px;
+      cursor: pointer;
 
       @include tablet {
         flex: 0 0 110px;
@@ -91,6 +92,9 @@
         border: 10px solid #f6f0ff;
         border-radius: 100px;
         overflow: hidden;
+        transition-property: border-color;
+        transition-timing-function: ease-in-out;
+        transition-duration: 0.2s;
 
         @include tablet {
           border-width: 5px;
@@ -108,6 +112,10 @@
         }
       }
 
+      &:hover &-figure {
+        border-color: #dec8ff;
+      }
+
       &.active &-figure {
         border-color: #8a6abe;
       }
@@ -117,6 +125,10 @@
         font-size: 20px;
         text-align: center;
         color: #000;
+
+        transition-property: font-weight, color;
+        transition-timing-function: ease-in-out;
+        transition-duration: 0.2s;
 
         @include laptop {
           font-size: 16px;
@@ -237,32 +249,32 @@
           filter: invert(100%);
           transition: background-color ease-in-out 0.2s;
           cursor: pointer;
-  
+
           @include laptop {
             width: 30px;
           }
-  
+
           &:hover {
             background-color: rgba($color: $purple100, $alpha: 0.5);
           }
-  
+
           &.swiper-button-disabled {
             opacity: 0.3;
           }
         }
-  
+
         &-prev {
           left: 0;
           transform: rotate(180deg);
-  
+
           @include tablet {
             left: 20px;
           }
         }
-  
+
         &-next {
           right: 0;
-  
+
           @include tablet {
             right: 20px;
           }

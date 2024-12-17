@@ -7,6 +7,10 @@
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
     <script type="module" src="./js/index.js" defer></script>
   </head>
@@ -276,7 +280,7 @@
           <h2 class="select-product__title">Выбрать по потребности кожи</h2>
 
           <div class="select-product__needs">
-            <div class="select-product__needs-card active">
+            <div class="select-product__needs-card" data-needs="wetting">
               <figure class="select-product__needs-card-figure">
                 <img
                   class="select-product__needs-card-figure-image"
@@ -287,7 +291,7 @@
               <div class="select-product__needs-card-text">Увлажнение</div>
             </div>
 
-            <div class="select-product__needs-card">
+            <div class="select-product__needs-card" data-needs="wrinkles">
               <figure class="select-product__needs-card-figure">
                 <img
                   class="select-product__needs-card-figure-image"
@@ -298,7 +302,7 @@
               <div class="select-product__needs-card-text">Борьба с морщинами</div>
             </div>
 
-            <div class="select-product__needs-card">
+            <div class="select-product__needs-card" data-needs="lifting">
               <figure class="select-product__needs-card-figure">
                 <img
                   class="select-product__needs-card-figure-image"
@@ -309,7 +313,7 @@
               <div class="select-product__needs-card-text">Лифтинг</div>
             </div>
 
-            <div class="select-product__needs-card">
+            <div class="select-product__needs-card" data-needs="purification">
               <figure class="select-product__needs-card-figure">
                 <img
                   class="select-product__needs-card-figure-image"
@@ -320,7 +324,7 @@
               <div class="select-product__needs-card-text">Очищение</div>
             </div>
 
-            <div class="select-product__needs-card">
+            <div class="select-product__needs-card" data-needs="care">
               <figure class="select-product__needs-card-figure">
                 <img
                   class="select-product__needs-card-figure-image"
@@ -331,7 +335,7 @@
               <div class="select-product__needs-card-text">Интенсивный уход</div>
             </div>
 
-            <div class="select-product__needs-card">
+            <div class="select-product__needs-card" data-needs="">
               <figure class="select-product__needs-card-figure">
                 <img
                   class="select-product__needs-card-figure-image"
@@ -352,15 +356,21 @@
             </p>
 
             <div class="select-product__info-menu">
-              <button class="select-product__info-menu-button active">Hydro boost</button>
-              <button class="select-product__info-menu-button">Wrinkle repair</button>
-              <button class="select-product__info-menu-button">Wrinkle repair</button>
+              <button class="select-product__info-menu-button" data-type="hydroboost">
+                Hydro boost
+              </button>
+              <button class="select-product__info-menu-button" data-type="wrinklerepair">
+                Wrinkle repair
+              </button>
+              <button class="select-product__info-menu-button" data-type="wrinklerepair">
+                Wrinkle repair
+              </button>
             </div>
 
             <div class="select-product__info-products">
               <div class="swiper">
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide">
+                  <div class="swiper-slide" data-needs="wetting" data-type="hydroboost">
                     <div class="select-product__info-card">
                       <figure class="select-product__info-card-figure">
                         <img
@@ -389,7 +399,7 @@
                     </div>
                   </div>
 
-                  <div class="swiper-slide">
+                  <div class="swiper-slide" data-needs="wrinkles" data-type="wrinklerepair">
                     <div class="select-product__info-card">
                       <figure class="select-product__info-card-figure">
                         <img
@@ -405,7 +415,7 @@
                       </figure>
 
                       <div class="select-product__info-card-details">
-                        <h3 class="select-product__info-card-details-title">35+ Hydro boost</h3>
+                        <h3 class="select-product__info-card-details-title">35+ Wrinkle repair</h3>
                         <div class="select-product__info-card-details-text">
                           Современные технологии достигли такого уровня, что курс
                         </div>
@@ -418,7 +428,7 @@
                     </div>
                   </div>
 
-                  <div class="swiper-slide">
+                  <div class="swiper-slide" data-needs="lifting" data-type="hydroboost">
                     <div class="select-product__info-card">
                       <figure class="select-product__info-card-figure">
                         <img
@@ -447,7 +457,7 @@
                     </div>
                   </div>
 
-                  <div class="swiper-slide">
+                  <div class="swiper-slide" data-needs="purification" data-type="wrinklerepair">
                     <div class="select-product__info-card">
                       <figure class="select-product__info-card-figure">
                         <img
@@ -463,7 +473,7 @@
                       </figure>
 
                       <div class="select-product__info-card-details">
-                        <h3 class="select-product__info-card-details-title">35+ Hydro boost</h3>
+                        <h3 class="select-product__info-card-details-title">35+ Wrinkle repair</h3>
                         <div class="select-product__info-card-details-text">
                           Современные технологии достигли такого уровня, что курс
                         </div>
@@ -476,7 +486,7 @@
                     </div>
                   </div>
 
-                  <div class="swiper-slide">
+                  <div class="swiper-slide" data-needs="care" data-type="hydroboost">
                     <div class="select-product__info-card">
                       <figure class="select-product__info-card-figure">
                         <img
@@ -505,7 +515,7 @@
                     </div>
                   </div>
 
-                  <div class="swiper-slide">
+                  <div class="swiper-slide" data-needs="wetting" data-type="wrinklerepair">
                     <div class="select-product__info-card">
                       <figure class="select-product__info-card-figure">
                         <img
@@ -521,7 +531,297 @@
                       </figure>
 
                       <div class="select-product__info-card-details">
+                        <h3 class="select-product__info-card-details-title">35+ Wrinkle repair</h3>
+                        <div class="select-product__info-card-details-text">
+                          Современные технологии достигли такого уровня, что курс
+                        </div>
+                        <div class="select-product__info-card-details-buy">
+                          <button class="select-product__info-card-details-buy-button">
+                            Купить
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide" data-needs="wrinkles" data-type="hydroboost">
+                    <div class="select-product__info-card">
+                      <figure class="select-product__info-card-figure">
+                        <img
+                          class="select-product__info-card-figure-image"
+                          src="./assets/select-product-main-1.webp"
+                          alt=""
+                        />
+                        <img
+                          class="select-product__info-card-figure-image select-product__info-card-figure-image_hidden"
+                          src="./assets/select-product-alt-1.webp"
+                          alt=""
+                        />
+                      </figure>
+
+                      <div class="select-product__info-card-details">
                         <h3 class="select-product__info-card-details-title">35+ Hydro boost</h3>
+                        <div class="select-product__info-card-details-text">
+                          Современные технологии достигли такого уровня, что курс
+                        </div>
+                        <div class="select-product__info-card-details-buy">
+                          <button class="select-product__info-card-details-buy-button">
+                            Купить
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide" data-needs="lifting" data-type="wrinklerepair">
+                    <div class="select-product__info-card">
+                      <figure class="select-product__info-card-figure">
+                        <img
+                          class="select-product__info-card-figure-image"
+                          src="./assets/select-product-main-2.webp"
+                          alt=""
+                        />
+                        <img
+                          class="select-product__info-card-figure-image select-product__info-card-figure-image_hidden"
+                          src="./assets/select-product-alt-1.webp"
+                          alt=""
+                        />
+                      </figure>
+
+                      <div class="select-product__info-card-details">
+                        <h3 class="select-product__info-card-details-title">35+ Wrinkle repair</h3>
+                        <div class="select-product__info-card-details-text">
+                          Современные технологии достигли такого уровня, что курс
+                        </div>
+                        <div class="select-product__info-card-details-buy">
+                          <button class="select-product__info-card-details-buy-button">
+                            Купить
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide" data-needs="purification" data-type="hydroboost">
+                    <div class="select-product__info-card">
+                      <figure class="select-product__info-card-figure">
+                        <img
+                          class="select-product__info-card-figure-image"
+                          src="./assets/select-product-main-1.webp"
+                          alt=""
+                        />
+                        <img
+                          class="select-product__info-card-figure-image select-product__info-card-figure-image_hidden"
+                          src="./assets/select-product-alt-1.webp"
+                          alt=""
+                        />
+                      </figure>
+
+                      <div class="select-product__info-card-details">
+                        <h3 class="select-product__info-card-details-title">35+ Hydro boost</h3>
+                        <div class="select-product__info-card-details-text">
+                          Современные технологии достигли такого уровня, что курс
+                        </div>
+                        <div class="select-product__info-card-details-buy">
+                          <button class="select-product__info-card-details-buy-button">
+                            Купить
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide" data-needs="care" data-type="wrinklerepair">
+                    <div class="select-product__info-card">
+                      <figure class="select-product__info-card-figure">
+                        <img
+                          class="select-product__info-card-figure-image"
+                          src="./assets/select-product-main-2.webp"
+                          alt=""
+                        />
+                        <img
+                          class="select-product__info-card-figure-image select-product__info-card-figure-image_hidden"
+                          src="./assets/select-product-alt-1.webp"
+                          alt=""
+                        />
+                      </figure>
+
+                      <div class="select-product__info-card-details">
+                        <h3 class="select-product__info-card-details-title">35+ Wrinkle repair</h3>
+                        <div class="select-product__info-card-details-text">
+                          Современные технологии достигли такого уровня, что курс
+                        </div>
+                        <div class="select-product__info-card-details-buy">
+                          <button class="select-product__info-card-details-buy-button">
+                            Купить
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide" data-needs="wetting" data-type="hydroboost">
+                    <div class="select-product__info-card">
+                      <figure class="select-product__info-card-figure">
+                        <img
+                          class="select-product__info-card-figure-image"
+                          src="./assets/select-product-main-1.webp"
+                          alt=""
+                        />
+                        <img
+                          class="select-product__info-card-figure-image select-product__info-card-figure-image_hidden"
+                          src="./assets/select-product-alt-1.webp"
+                          alt=""
+                        />
+                      </figure>
+
+                      <div class="select-product__info-card-details">
+                        <h3 class="select-product__info-card-details-title">35+ Hydro boost</h3>
+                        <div class="select-product__info-card-details-text">
+                          Современные технологии достигли такого уровня, что курс
+                        </div>
+                        <div class="select-product__info-card-details-buy">
+                          <button class="select-product__info-card-details-buy-button">
+                            Купить
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide" data-needs="wrinkles" data-type="wrinklerepair">
+                    <div class="select-product__info-card">
+                      <figure class="select-product__info-card-figure">
+                        <img
+                          class="select-product__info-card-figure-image"
+                          src="./assets/select-product-main-2.webp"
+                          alt=""
+                        />
+                        <img
+                          class="select-product__info-card-figure-image select-product__info-card-figure-image_hidden"
+                          src="./assets/select-product-alt-1.webp"
+                          alt=""
+                        />
+                      </figure>
+
+                      <div class="select-product__info-card-details">
+                        <h3 class="select-product__info-card-details-title">35+ Wrinkle repair</h3>
+                        <div class="select-product__info-card-details-text">
+                          Современные технологии достигли такого уровня, что курс
+                        </div>
+                        <div class="select-product__info-card-details-buy">
+                          <button class="select-product__info-card-details-buy-button">
+                            Купить
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide" data-needs="lifting" data-type="hydroboost">
+                    <div class="select-product__info-card">
+                      <figure class="select-product__info-card-figure">
+                        <img
+                          class="select-product__info-card-figure-image"
+                          src="./assets/select-product-main-1.webp"
+                          alt=""
+                        />
+                        <img
+                          class="select-product__info-card-figure-image select-product__info-card-figure-image_hidden"
+                          src="./assets/select-product-alt-1.webp"
+                          alt=""
+                        />
+                      </figure>
+
+                      <div class="select-product__info-card-details">
+                        <h3 class="select-product__info-card-details-title">35+ Hydro boost</h3>
+                        <div class="select-product__info-card-details-text">
+                          Современные технологии достигли такого уровня, что курс
+                        </div>
+                        <div class="select-product__info-card-details-buy">
+                          <button class="select-product__info-card-details-buy-button">
+                            Купить
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide" data-needs="purification" data-type="wrinklerepair">
+                    <div class="select-product__info-card">
+                      <figure class="select-product__info-card-figure">
+                        <img
+                          class="select-product__info-card-figure-image"
+                          src="./assets/select-product-main-2.webp"
+                          alt=""
+                        />
+                        <img
+                          class="select-product__info-card-figure-image select-product__info-card-figure-image_hidden"
+                          src="./assets/select-product-alt-1.webp"
+                          alt=""
+                        />
+                      </figure>
+
+                      <div class="select-product__info-card-details">
+                        <h3 class="select-product__info-card-details-title">35+ Wrinkle repair</h3>
+                        <div class="select-product__info-card-details-text">
+                          Современные технологии достигли такого уровня, что курс
+                        </div>
+                        <div class="select-product__info-card-details-buy">
+                          <button class="select-product__info-card-details-buy-button">
+                            Купить
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide" data-needs="care" data-type="hydroboost">
+                    <div class="select-product__info-card">
+                      <figure class="select-product__info-card-figure">
+                        <img
+                          class="select-product__info-card-figure-image"
+                          src="./assets/select-product-main-1.webp"
+                          alt=""
+                        />
+                        <img
+                          class="select-product__info-card-figure-image select-product__info-card-figure-image_hidden"
+                          src="./assets/select-product-alt-1.webp"
+                          alt=""
+                        />
+                      </figure>
+
+                      <div class="select-product__info-card-details">
+                        <h3 class="select-product__info-card-details-title">35+ Hydro boost</h3>
+                        <div class="select-product__info-card-details-text">
+                          Современные технологии достигли такого уровня, что курс
+                        </div>
+                        <div class="select-product__info-card-details-buy">
+                          <button class="select-product__info-card-details-buy-button">
+                            Купить
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide" data-needs="wetting" data-type="wrinklerepair">
+                    <div class="select-product__info-card">
+                      <figure class="select-product__info-card-figure">
+                        <img
+                          class="select-product__info-card-figure-image"
+                          src="./assets/select-product-main-2.webp"
+                          alt=""
+                        />
+                        <img
+                          class="select-product__info-card-figure-image select-product__info-card-figure-image_hidden"
+                          src="./assets/select-product-alt-1.webp"
+                          alt=""
+                        />
+                      </figure>
+
+                      <div class="select-product__info-card-details">
+                        <h3 class="select-product__info-card-details-title">35+ Wrinkle repair</h3>
                         <div class="select-product__info-card-details-text">
                           Современные технологии достигли такого уровня, что курс
                         </div>

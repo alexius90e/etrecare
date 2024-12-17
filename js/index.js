@@ -155,3 +155,73 @@ if (modalBuy) {
     }
   });
 }
+
+///
+
+const selectProductSlides = document.querySelectorAll('.select-product .swiper-slide');
+
+let needsProp = '';
+
+let typeProp = '';
+
+const selectProductNeedsCards = document.querySelectorAll('.select-product__needs-card');
+
+selectProductNeedsCards.forEach((needsCard) => {
+  needsCard.addEventListener('click', (event) => {
+    selectProductNeedsCards.forEach((card) => {
+      if (card !== event.currentTarget) card.classList.remove('active');
+    });
+    event.currentTarget.classList.toggle('active');
+
+    if (event.currentTarget.classList.contains('active')) {
+      needsProp = event.currentTarget.dataset.needs;
+    } else {
+      needsProp = '';
+    }
+    updateSelectProductSwiper(selectProductSwiper);
+  });
+});
+
+const selectProductmenuButtons = document.querySelectorAll('.select-product__info-menu-button');
+
+selectProductmenuButtons.forEach((menuButton) => {
+  menuButton.addEventListener('click', (event) => {
+    selectProductmenuButtons.forEach((button) => {
+      if (button !== event.currentTarget) button.classList.remove('active');
+    });
+    event.currentTarget.classList.toggle('active');
+
+    if (event.currentTarget.classList.contains('active')) {
+      typeProp = event.currentTarget.dataset.type;
+    } else {
+      typeProp = '';
+    }
+    updateSelectProductSwiper(selectProductSwiper);
+  });
+});
+
+function updateSelectProductSwiper(swiper) {
+  const slides = [...selectProductSlides].filter((slide) => {
+    const isTypeCorrect = typeProp === slide.dataset.type || typeProp === '';
+    const isNeedsCorrect = needsProp === slide.dataset.needs || needsProp === '';
+    if (isTypeCorrect && isNeedsCorrect) return slide;
+  });
+  swiper.removeAllSlides()
+  swiper.appendSlide([...slides])
+}
+
+///
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animation');
+    } else {
+      entry.target.classList.remove('animation');
+    }
+  });
+});
+
+observer.observe(document.querySelector('.skin-needs__content-scin'));
+observer.observe(document.querySelector('.skin-needs__content-plant'));
+observer.observe(document.querySelector('.skin-needs__content-life'));

@@ -1027,6 +1027,7 @@ img {
 }
 .select-product__needs-card {
   flex: 0 0 174px;
+  cursor: pointer;
 }
 @media (max-width: 768px) {
   .select-product__needs-card {
@@ -1040,6 +1041,9 @@ img {
   border: 10px solid #f6f0ff;
   border-radius: 100px;
   overflow: hidden;
+  transition-property: border-color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
 }
 @media (max-width: 768px) {
   .select-product__needs-card-figure {
@@ -1057,6 +1061,9 @@ img {
     width: 100px;
   }
 }
+.select-product__needs-card:hover .select-product__needs-card-figure {
+  border-color: #dec8ff;
+}
 .select-product__needs-card.active .select-product__needs-card-figure {
   border-color: #8a6abe;
 }
@@ -1065,6 +1072,9 @@ img {
   font-size: 20px;
   text-align: center;
   color: #000;
+  transition-property: font-weight, color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
 }
 @media (max-width: 1024px) {
   .select-product__needs-card-text {
@@ -1793,6 +1803,10 @@ img {
   display: flex;
   gap: 20px;
 }
+.skin-needs__content-scin.animation {
+  animation: fadeInRight;
+  animation-duration: 1s;
+}
 @media (max-width: 768px) {
   .skin-needs__content-scin {
     flex-wrap: wrap;
@@ -1845,6 +1859,10 @@ img {
     -o-object-fit: cover;
        object-fit: cover;
   }
+}
+.skin-needs__content-plant.animation {
+  animation: fadeInLeft;
+  animation-duration: 1s;
 }
 @media (max-width: 768px) {
   .skin-needs__content-plant {
@@ -1934,6 +1952,10 @@ img {
     -o-object-fit: cover;
        object-fit: cover;
   }
+}
+.skin-needs__content-life.animation {
+  animation: fadeInRight;
+  animation-duration: 1s;
 }
 @media (max-width: 1024px) {
   .skin-needs__content-life {
@@ -2109,6 +2131,10 @@ img {
   display: flex;
   gap: 20px;
 }
+.skin-needs__content-scin.animation {
+  animation: fadeInRight;
+  animation-duration: 1s;
+}
 @media (max-width: 768px) {
   .skin-needs__content-scin {
     flex-wrap: wrap;
@@ -2161,6 +2187,10 @@ img {
     -o-object-fit: cover;
        object-fit: cover;
   }
+}
+.skin-needs__content-plant.animation {
+  animation: fadeInLeft;
+  animation-duration: 1s;
 }
 @media (max-width: 768px) {
   .skin-needs__content-plant {
@@ -2250,6 +2280,10 @@ img {
     -o-object-fit: cover;
        object-fit: cover;
   }
+}
+.skin-needs__content-life.animation {
+  animation: fadeInRight;
+  animation-duration: 1s;
 }
 @media (max-width: 1024px) {
   .skin-needs__content-life {
