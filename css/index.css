@@ -1676,6 +1676,7 @@ img {
 
 .skin-needs {
   padding: 120px 0;
+  overflow: hidden;
 }
 @media (max-width: 768px) {
   .skin-needs {
@@ -2004,6 +2005,7 @@ img {
 
 .skin-needs {
   padding: 120px 0;
+  overflow: hidden;
 }
 @media (max-width: 768px) {
   .skin-needs {
