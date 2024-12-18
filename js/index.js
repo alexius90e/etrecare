@@ -206,8 +206,8 @@ function updateSelectProductSwiper(swiper) {
     const isNeedsCorrect = needsProp === slide.dataset.needs || needsProp === '';
     if (isTypeCorrect && isNeedsCorrect) return slide;
   });
-  swiper.removeAllSlides()
-  swiper.appendSlide([...slides])
+  swiper.removeAllSlides();
+  swiper.appendSlide([...slides]);
 }
 
 ///
@@ -216,8 +216,6 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.classList.add('animation');
-    } else {
-      entry.target.classList.remove('animation');
     }
   });
 });
